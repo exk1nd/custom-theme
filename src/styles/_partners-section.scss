@@ -1,0 +1,80 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+.partners-section {
+	padding: 25px 0;
+	.section-header {
+		margin: 0 0 39px;
+		@include media-breakpoint-up(lg) {
+			margin: 0 0 57px;
+		}
+	}
+	.nav-tabs {
+		border: none;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		overflow-y: unset;
+		gap: 4px;
+		min-height: 50px;
+		margin: 0 calc($grid-gutter-width * -0.5) 0 0;
+		@include media-breakpoint-up(md) {
+			margin: 0;
+		}
+		.nav-item {
+			min-width: 146px;
+		}
+		.nav-link {
+			padding: 11px 0;
+			border: none;
+			border-bottom: 2px solid $gray-200;
+			height: 50px;
+			@include media-breakpoint-up(lg) {
+				padding: 10px 0;
+			}
+			&.active {
+				border-bottom-color: $blue-03;
+			}
+		}
+		.img-holder {
+			margin: 0;
+			text-align: center;
+		}
+	}
+	.tab-content {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		padding: 22px 0 30px;
+		border-bottom: 1px solid $gray-200;
+		@include media-breakpoint-up(lg) {
+			padding: 22px 0 40px;
+		}
+		p {
+			@include media-breakpoint-up(lg) {
+				max-width: 67%;
+			}
+		}
+		h3 {
+			font-size: 18px;
+			line-height: 1.333333;
+			margin: 20px 0;
+			@include media-breakpoint-up(lg) {
+				font-size: 20px;
+				line-height: 1.2;
+			}
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 9px 12px;
+			li {
+				padding: 9px 18px;
+				border-radius: 50px;
+				border: 1px solid $blue-03;
+				box-shadow: 2px 2px 0 $blue-03;
+			}
+		}
+	}
+}

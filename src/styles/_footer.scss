@@ -1,0 +1,223 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+.footer {
+	display: flex;
+	align-items: center;
+	background-color: #000000;
+	height: 145px;
+	p {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 13px;
+		line-height: 2.5px;
+		font-weight: 300;
+		letter-spacing: 0.1em;
+		color: #ffffff;
+	}
+	.footer-info-text {
+		p {
+			font-size: 10px;
+		}
+	}
+}
+.descr-desktop {
+	display: block;
+}
+.descr-mobile {
+	display: none;
+}
+/** Media **/
+@media screen and (max-width: 1400px) {
+	.footer {
+		.footer_menu {
+			ul.footer_menu_link {
+				li {
+					padding: 30px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.footer {
+		.footer_menu,
+		.language,
+		.primary-btn {
+			display: none;
+		}
+		.header_logo {
+			a {
+				img {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.footer {
+		.footer_pays {
+			display: none;
+		}
+		.footer_middle {
+			grid-template-columns: 1fr;
+			grid-row-gap: 40px;
+			.footer_descr {
+				.footer_title_left {
+					text-align: left;
+				}
+			}
+		}
+		.footer_guid {
+			.footer_risk {
+				margin-bottom: 30px;
+			}
+		}
+		.footer_guid {
+			.footer_risk {
+				display: block;
+			}
+		}
+	}
+	.descr-desktop {
+		display: none;
+	}
+	.descr-mobile {
+		display: block;
+		padding: 0 16px;
+	}
+	.footer-top-part-menu-logos {
+		grid-template-columns: repeat(2, 1fr) !important;
+		margin: 25px 0 0 10px !important;
+		gap: 30px !important;
+		padding: 0 0 20px 0;
+	}
+	.footer-top-part-logo img {
+		display: none;
+	}
+}
+#footer {
+	background-color: #ffffff;
+	padding-top: 30px;
+	margin-top: 35px;
+	position: relative;
+	z-index: 10;
+	.footer-top-part {
+		display: flex;
+		align-items: start;
+		max-width: 1200px;
+		margin: 0px auto;
+		/*border-bottom: 1px solid #cfd2da;*/
+		padding: 0 0 30px 0;
+	}
+	.footer-top-part-social {
+		margin: 15px 0;
+	}
+	.footer-top-part-menu-block {
+		display: flex;
+		margin-left: 90px;
+	}
+	.footer-top-part-menu-block span {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		font-family: $manrope-font;
+		color: #393a66;
+	}
+	.footer-top-part-menu-logos {
+		display: grid;
+		margin: 0 0 0 auto;
+		gap: 15px;
+	}
+	.footer-top-part-menu-block ul {
+		list-style: none;
+		color: #94a3a8;
+		line-height: 30px;
+		padding: 12.5px 0 0 0;
+	}
+	.footer-top-part-menu-block li a {
+		color: #393a66;
+		text-decoration: unset;
+		font-weight: normal;
+		font-weight: 400;
+		font-size: 18px;
+		font-family: $inter-font;
+		line-height: 26px;
+	}
+	.footer-top-part-menu-block li a:hover {
+		text-decoration: underline;
+	}
+	.footer-top-part-menu-other {
+		margin-left: 100px;
+	}
+	.footer-disclaimer-part {
+		max-width: 1000px;
+		margin: 0 auto;
+		color: #94a3a8;
+		text-align: center;
+		font-size: 0.9em;
+		padding: 0 10px;
+	}
+	.footer-security-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 1000px;
+		border-bottom: 1px solid #cfd2da;
+		padding-bottom: 15px;
+		margin: 0px auto;
+	}
+	.footer-security-icon .cloudflare-item {
+		margin-right: 15px;
+		margin-top: 10px;
+	}
+	.footer-security-icon .cloudflare-item .cloudflare-item-description {
+		font-size: 8px;
+		text-align: right;
+		margin-bottom: 0;
+		margin-top: -13px;
+	}
+	.footer-security-icon .mcafee-item {
+		margin-top: 25px;
+	}
+	.footer-security-icon .dmca-item {
+		margin-top: 6px;
+		margin-left: 10px;
+	}
+	.footer-disclaimer-part h3 {
+		font-weight: 600;
+		font-size: 20px;
+		text-align: left;
+	}
+	.footer-copyright-part {
+		color: #94a3a8;
+		text-align: center;
+		margin: 0;
+		padding: 25px 0 0 0;
+		font-size: 0.9em;
+	}
+	.footer-copyright-part p {
+		margin: 5px;
+		padding: 0;
+		color: #575878;
+		font-weight: 600;
+	}
+	.footer-copyright-part p:last-child {
+		margin: 0;
+		padding: 30px 0;
+		padding-top: 0;
+	}
+	.container-my {
+		padding: 0 calc($grid-gutter-width * 0.5);
+		@include media-breakpoint-up(lg) {
+			padding: 0;
+		}
+	}
+	.mob-fb {
+		@include media-breakpoint-down(md) {
+			display: block !important;
+			padding: 0 10px 10px;
+		}
+	}
+}

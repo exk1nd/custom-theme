@@ -1,0 +1,15 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+#breadcrumbs {
+	text-align: left;
+	font-family: $inter-font;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 14px;
+	@include media-breakpoint-up(lg) {
+		margin: 0 0 24px;
+	}
+	a {
+		color: $white;
+	}
+}

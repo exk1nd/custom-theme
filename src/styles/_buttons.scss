@@ -1,0 +1,28 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/buttons";
+.btn {
+	font-family: $manrope-font;
+	text-decoration: none;
+	text-transform: uppercase;
+	&-primary {
+		@include button-variant($blue-03, $blue-03, $white, transparent, $blue-03, $blue-03);
+	}
+	&-icon-lock {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&::after {
+			content: "";
+			height: 20px;
+			width: 20px;
+			-webkit-mask-image: url("../img/ico-protection-03.svg");
+			mask-image: url("../img/ico-protection-03.svg");
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-size: 20px 20px;
+			mask-size: 20px 20px;
+			background: currentColor;
+			margin-left: 10px;
+		}
+	}
+}

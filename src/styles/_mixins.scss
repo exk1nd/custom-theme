@@ -1,0 +1,47 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+@mixin grid-gutter($gutter-width) {
+	margin-left: -$gutter-width*0.5;
+	margin-right: -$gutter-width*0.5;
+	& > [class^="col"] {
+		padding-left: $gutter-width*0.5;
+		padding-right: $gutter-width*0.5;
+	}
+}
+@mixin position-absolute() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+@mixin object-fit-cover() {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	font-family: "object-fit: cover;";
+}
+@mixin check-list() {
+	margin: 0 0 10px;
+	padding: 0;
+	list-style: none;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: $gray-700;
+	@include media-breakpoint-up(lg) {
+		font-size: 18px;
+		line-height: 1.55;
+	}
+	li {
+		padding-left: 30px;
+		position: relative;
+		margin: 0 0 10px;
+		&::before {
+			content: url("../img/ico-check.svg");
+			position: absolute;
+			top: 3px;
+			left: 0;
+		}
+	}
+}

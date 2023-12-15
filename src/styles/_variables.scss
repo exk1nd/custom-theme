@@ -1,0 +1,63 @@
+$inter-font: 'Inter', sans-serif;
+$manrope-font: 'Manrope', sans-serif;
+$color-prime: #3a7efc;
+$blue-02: #2d6cfe;
+$blue-03: #0f63fb;
+$blue-04: #0079FF;
+$orange: #ff6600;
+$white: #ffffff;
+$black: #000000;
+$header-height: 75px;
+$header-height-sm: 65px;
+$gray-100: #f9faff;
+$gray-150: #f4f6fe;
+$gray-200: #dce5f5;
+$gray-600: #5D5E86;
+$gray-700: #393a66;
+$green: #21ad59;
+$purple: #771CEA;
+$content-wrapper-width: 790px;
+// bootstrap grid
+$grid-columns: 12;
+$grid-gutter-width: 32px;
+$grid-gutter-width-mobile: $grid-gutter-width;
+$grid-breakpoints: (
+		  xs: 0,
+		  sm: 576px,
+		  md: 768px,
+		  lg: 992px,
+		  xl: 1340px
+);
+$container-max-widths: (
+		  sm: 540px,
+		  md: 720px,
+		  lg: 960px,
+		  xl: 1230px
+);
+$transition: all .3s ease;
+$tooltip-font-size: 12px;
+$tooltip-max-width: 231px;
+$tooltip-color: $gray-700;
+$tooltip-bg: $white;
+$tooltip-border-radius: 15px;
+$tooltip-opacity: 1;
+$tooltip-padding-y: 15px;
+$tooltip-padding-x: 15px;
+$tooltip-margin: 0;
+$tooltip-arrow-width: .8rem;
+$tooltip-arrow-height: .4rem;
+$tooltip-arrow-color: $white;
+
+// bootstrap buttons
+$btn-border-width: 2px;
+$btn-border-radius: 50px;
+$btn-font-weight: 700;
+$btn-font-size: 16px;
+$btn-line-height: 1;
+$btn-padding-y: 18px;
+$btn-padding-x: 29px;
+$btn-font-size-sm: $btn-font-size;
+$btn-line-height-sm: $btn-line-height;
+$btn-border-radius-sm: $btn-border-radius;
+$btn-padding-y-sm: $btn-padding-y;
+$btn-padding-x-sm: 3rem;

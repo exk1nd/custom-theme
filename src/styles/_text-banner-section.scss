@@ -1,0 +1,30 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+.text-banner-section {
+	padding: 40px 0 35px;
+	margin: 55px 0 20px;
+	background: $gray-100;
+	@include media-breakpoint-up(lg) {
+		padding: 61px 0 50px;
+		margin: 94px 0 70px;
+	}
+	.section-header {
+		margin: 0 0 20px;
+		@include media-breakpoint-up(lg) {
+			margin: 0 0 30px;
+		}
+	}
+	.text-holder {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			max-width: 60%;
+			margin: 0 auto;
+		}
+		p {
+			margin: 0 0 10px;
+		}
+		strong {
+			font-weight: 600;
+		}
+	}
+}

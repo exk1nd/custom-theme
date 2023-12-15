@@ -1,0 +1,41 @@
+.error404 {
+  display: block;
+  position: relative;
+  padding: 100px 0 0 0;
+  .entry-title {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .entry-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 0 100px 0;
+  }
+}
+
+// (max-width: 568px)
+@include media-breakpoint-down(sm) {
+  .error404 {
+    padding: 75px 0 0 0;
+    .entry-title {
+      font-size: 20px;
+    }
+    .entry-content {
+      font-size: 14px;
+      padding-top: 15px;
+      width: 90%;
+    }
+  }
+}

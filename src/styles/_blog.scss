@@ -1,0 +1,25 @@
+.blog-table {
+  display: flex;
+  justify-content: center;
+}
+.wp-post-image {
+  width: 100%;
+  height: auto;
+  padding-bottom: 10px;
+}
+.prev-next-posts {
+  display: flex;
+  justify-content: center;
+}
+.prev-posts-link {
+  padding: 10px;
+  color: #2e4fcd;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.next-posts-link {
+  padding: 10px;
+  color: #2e4fcd;
+  font-weight: 600;
+  text-transform: uppercase;
+}

@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+.text-image-columns-section {
+	padding: 20px 0;
+	.row {
+		@include media-breakpoint-down(lg) {
+			flex-direction: column-reverse;
+		}
+	}
+	.img-holder {
+		max-width: 400px;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+	}
+}

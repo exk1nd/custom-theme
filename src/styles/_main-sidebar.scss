@@ -1,0 +1,17 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+.main-sidebar {
+	.wrapper {
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			margin-right: 20px;
+			max-width: $content-wrapper-width;
+			width: 66%;
+		}
+	}
+	.content-holder {
+		.container {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "variables";
+button {
+	border: none;
+	outline: none;
+}
+a {
+	text-decoration: none;
+	color: unset;
+	&:hover {
+		color: unset;
+	}
+}
+main {
+	padding-top: $header-height-sm;
+	@include media-breakpoint-up(lg) {
+		padding-top: $header-height;
+	}
+}
+.tooltip {
+	.tooltip-inner {
+		box-shadow: 0 0 20px rgba(2, 54, 116, 0.15);
+	}
+}
+img {
+	max-width: 100%;
+}
+.section-header {
+	margin: 0 0 40px;
+	@include media-breakpoint-up(lg) {
+		margin: 0 0 60px;
+	}
+	h2 {
+		text-align: center;
+	}
+}
+strong {
+	font-weight: 600;
+}

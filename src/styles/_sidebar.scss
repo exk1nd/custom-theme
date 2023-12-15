@@ -1,0 +1,58 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+.sidebar {
+	display: none;
+	@include media-breakpoint-up(lg) {
+		width: 26%;
+		max-width: 307px;
+		margin-left: auto;
+		display: block;
+	}
+	.sidebar-title {
+		margin: 0 0 18px;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 1.2;
+		color: $gray-700;
+		text-decoration: none;
+	}
+	.sidebar-item-img {
+		width: 72px;
+		height: 72px;
+		flex-shrink: 0;
+		margin-left: 10px;
+	}
+	.sidebar-item-img img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+	.sidebar-item-date {
+		font-family: $inter-font;
+		color: #a4a4bd;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 15px;
+		margin: 0;
+	}
+	.sidebar-item-title {
+		font-family: $inter-font;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.5;
+		text-decoration: none;
+		color: $gray-700;
+		margin-bottom: 6px;
+		display: block;
+	}
+	.sidebar-item-container {
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.sidebar-item-info {
+		margin-right: auto;
+
+	}
+}

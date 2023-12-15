@@ -1,0 +1,73 @@
+@import "variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+.app-card {
+	padding: 13px;
+	border-radius: 20px;
+	border: 1px solid $gray-200;
+	margin: 40px 0;
+	font-size: 16px;
+	line-height: 1.5;
+	@include media-breakpoint-up(md) {
+		padding: 18px;
+	}
+	header {
+		display: flex;
+		align-items: center;
+		margin: 0 0 20px;
+		@include media-breakpoint-down(md) {
+			flex-wrap: wrap;
+		}
+		.img-holder {
+			margin: 0 20px 0 0;
+			img {
+				width: 60px;
+				height: 60px;
+				@include media-breakpoint-up(md) {
+					width: 72px;
+					height: 72px;
+				}
+			}
+		}
+		h3 {
+			margin: 0;
+		}
+		.btn {
+			margin-left: auto;
+			padding: 15px 34px;
+			@include media-breakpoint-down(md) {
+				margin: 20px 0 0;
+				padding: 12px;
+				width: 100%;
+			}
+		}
+	}
+	.text-holder {
+		margin: 0 0 20px;
+		p {
+			margin: 0 0 10px;
+		}
+	}
+	footer {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		@include media-breakpoint-up(md) {
+			grid-template-columns: 1fr 1fr;
+			gap: 30px;
+		}
+		.item-holder {
+			flex-grow: 1;
+			h3 {
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 1.555555;
+				padding-bottom: 7px;
+				border-bottom: 1px solid $gray-200;
+				margin: 0 0 15px;
+				@include media-breakpoint-up(md) {
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+}
