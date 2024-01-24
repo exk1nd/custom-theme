@@ -1,38 +1,52 @@
-$inter-font: 'Inter', sans-serif;
-$manrope-font: 'Manrope', sans-serif;
+$fonts: '../fonts/';
+
+$dmsans-font: "DM Sans", sans-serif;
 $color-prime: #3a7efc;
 $blue-02: #2d6cfe;
 $blue-03: #0f63fb;
-$blue-04: #0079FF;
+$blue-04: #0079ff;
+$blue-05: #367af6;
 $orange: #ff6600;
 $white: #ffffff;
 $black: #000000;
 $header-height: 75px;
 $header-height-sm: 65px;
-$gray-100: #f9faff;
+$gray-50: #dae3f2;
+$gray-100: #F8F8F8;
 $gray-150: #f4f6fe;
-$gray-200: #dce5f5;
-$gray-600: #5D5E86;
-$gray-700: #393a66;
+$gray-200: #E4E1E1;
+$gray-250: #f2f1f6;
+$gray-400: #bbbbc0;
+$gray-500: #848489;
+$gray-520: #a5b4d1;
+$gray-550: #7a7a93;
+$gray-600: #5d5e86;
+$gray-650: #6a6b8a;
+$gray-700: #2E4921;
+$gray-750: #454565;
+$dark: #090b0a;
 $green: #21ad59;
-$purple: #771CEA;
+$purple: #771cea;
+$yellow: #fdcc1f;
+$red: #ca0707;
 $content-wrapper-width: 790px;
 // bootstrap grid
 $grid-columns: 12;
 $grid-gutter-width: 32px;
 $grid-gutter-width-mobile: $grid-gutter-width;
 $grid-breakpoints: (
-		  xs: 0,
-		  sm: 576px,
-		  md: 768px,
-		  lg: 992px,
-		  xl: 1340px
+        xs: 0,
+        xsm: 375px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1340px
 );
 $container-max-widths: (
-		  sm: 540px,
-		  md: 720px,
-		  lg: 960px,
-		  xl: 1230px
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1232px
 );
 $transition: all .3s ease;
 $tooltip-font-size: 12px;
@@ -47,17 +61,31 @@ $tooltip-margin: 0;
 $tooltip-arrow-width: .8rem;
 $tooltip-arrow-height: .4rem;
 $tooltip-arrow-color: $white;
-
 // bootstrap buttons
 $btn-border-width: 2px;
-$btn-border-radius: 50px;
-$btn-font-weight: 700;
-$btn-font-size: 16px;
+$btn-border-radius: 2px;
+$btn-font-weight: 800;
+$btn-font-size: 18px;
 $btn-line-height: 1;
-$btn-padding-y: 18px;
+$btn-padding-y: 16px;
 $btn-padding-x: 29px;
 $btn-font-size-sm: $btn-font-size;
 $btn-line-height-sm: $btn-line-height;
 $btn-border-radius-sm: $btn-border-radius;
 $btn-padding-y-sm: $btn-padding-y;
 $btn-padding-x-sm: 3rem;
+// form inputs
+$input-bg: rgba($white, 1);
+$input-color: $gray-700;
+$input-placeholder-color: rgba($gray-600, 1);
+$input-border-color: $gray-200;
+$input-font-weight: 400;
+$input-font-size: 16px;
+$input-line-height: 1.5;
+$input-padding-x: 48px;
+$input-padding-y: 14px;
+$input-height: 54px;
+$input-border-radius: 50px;
+$input-box-shadow: none;
+$input-focus-box-shadow: $input-box-shadow;
+$input-focus-border-color: $black;

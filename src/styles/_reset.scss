@@ -37,3 +37,237 @@ img {
 strong {
 	font-weight: 600;
 }
+.wpcf7-not-valid-tip {
+	font-size: 14px;
+}
+.wpcf7 form .wpcf7-response-output {
+	margin-left: 0;
+	margin-right: 0;
+}
+main.main-sidebar {
+	> .content-holder {
+		margin: 0 0 30px;
+		@include media-breakpoint-up(lg) {
+			margin: 0 0 60px;
+		}
+	}
+}
+body.smart-banner-active {
+	main {
+		@include media-breakpoint-down(md) {
+			padding-top: 133px;
+		}
+	}
+}
+.wp-block-table.is-style-stripes {
+	background: none;
+	border: none;
+}
+.wp-block-table td, .wp-block-table th {
+	border: none;
+}
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+	background: none;
+}
+.nice-select {
+	border-radius: 2px;
+	background: $white;
+	box-shadow: 0 0 10px 0 rgba(1, 39, 73, 0.11);
+	padding-right: 40px;
+	padding-left: 23px;
+	border: none;
+	@include media-breakpoint-down(md) {
+		line-height: 50px;
+		height: 50px;
+	}
+	&::after {
+		height: 9px;
+		width: 9px;
+		right: 27px;
+		top: 48%;
+		border-color: $gray-700;
+	}
+	&.active {
+		border-color: transparent;
+	}
+	.current {
+		background: none;
+		color: $gray-700;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.nice-select-dropdown {
+		width: 100%;
+		border-radius: 2px;
+		border: 1px solid $gray-200;
+		background: $white;
+		box-shadow: 0 4px 10px 0 rgba(1, 39, 73, 0.11);
+		margin: 5px 0 0;
+		overflow: hidden;
+		.list {
+			border-radius: 0;
+			margin: 0;
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background-color: $gray-200;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: $gray-700;
+			}
+		}
+	}
+	.option {
+		color: $gray-700;
+		font-size: 18px;
+		font-weight: 600;
+		padding: 0 25px;
+		&:nth-child(1):not(.disabled) {
+			border-top-left-radius: 2px;
+		}
+		&.disabled {
+			display: none;
+			& + .option {
+				border-top-left-radius: 2px;
+			}
+		}
+		&.selected {
+			background: $gray-150;
+			color: $blue-03;
+			font-weight: 600;
+		}
+	}
+}
+.swiper-button-prev,
+.swiper-button-next {
+	height: 38px;
+	width: 38px;
+	border-radius: 50%;
+	border: 1px solid $blue-03;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 42px;
+	left: 38px;
+	background: $white;
+	z-index: 10;
+	@include media-breakpoint-up(md) {
+		height: 50px;
+		width: 50px;
+	}
+	&::after {
+		content: "";
+		-webkit-mask-image: url("../img/ico-arrow-left.svg");
+		mask-image: url("../img/ico-arrow-left.svg");
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 15px 15px;
+		mask-size: 15px 15px;
+		background: $blue-03;
+		height: 15px;
+		width: 15px;
+		@include media-breakpoint-up(md) {
+			-webkit-mask-size: 20px 20px;
+			mask-size: 20px 20px;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	&:hover {
+		background: $blue-03;
+		&::after {
+			background: $white;
+		}
+	}
+	&.swiper-button-disabled {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+}
+.swiper-button-next {
+	&::after {
+		transform: rotate(-180deg);
+	}
+}
+.tooltip-inner {
+	font-family: $dmsans-font;
+}
+.error-text-holder {
+	font-size: 16px;
+	font-weight: 400;
+	color: $red;
+	padding: 20px 0;
+	display: none;
+	.sending-failed & {
+		display: block;
+	}
+	p {
+		margin: 0;
+	}
+}
+.wpcf7-spinner {
+	display: none;
+}
+.wpcf7-form {
+	position: relative;
+	.btn-holder {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: relative;
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+	}
+}
+.loader-container {
+	display: none;
+	bottom: 0;
+	margin-left: 5px;
+	width: 89px;
+	height: 54px;
+	@include media-breakpoint-down(md) {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.submitting & {
+		display: block;
+	}
+}
+.btn-load-more {
+	font-size: 16px;
+	font-weight: 600;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	&::after {
+		content: "";
+		height: 9px;
+		width: 9px;
+		border-width: 0 2px 2px 0;
+		border-style: solid;
+		transform: rotate(45deg);
+		display: inline-block;
+		margin: -5px 3px 0 8px;
+	}
+	&[aria-expanded='true'] {
+		&::after {
+			transform: rotate(-135deg);
+			margin-top: 3px;
+		}
+		.link-text {
+			&::before {
+				content: attr(data-text-close);
+			}
+		}
+	}
+	.link-text {
+		&::before {
+			content: attr(data-text-open);
+		}
+	}
+}

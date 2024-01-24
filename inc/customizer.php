@@ -117,12 +117,3 @@ function starter_pack_customize( $wp_customize ) {
 	);
 }
 add_action( 'customize_register', 'starter_pack_customize' );
-
-
-/**
- * Bind JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function starter_pack_customize_preview_js() {
-	wp_enqueue_script( 'customizer', get_template_directory_uri() . '/inc/customizer.js', array( 'jquery' ), null, true );
-}
-add_action( 'customize_preview_init', 'starter_pack_customize_preview_js' );

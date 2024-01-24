@@ -1,11 +1,23 @@
 @import "variables";
 @import "~bootstrap/scss/mixins/buttons";
+@import "~bootstrap/scss/mixins/breakpoints";
 .btn {
-	font-family: $manrope-font;
+	font-family: $dmsans-font;
+	font-size: 18px;
+	font-weight: 800;
 	text-decoration: none;
-	text-transform: uppercase;
+	@include media-breakpoint-down(md) {
+		font-size: 16px;
+		padding: 15px 20px;
+	}
+	&:hover {
+		text-decoration: none;
+	}
 	&-primary {
-		@include button-variant($blue-03, $blue-03, $white, transparent, $blue-03, $blue-03);
+		@include button-variant($white, $white, $gray-700, #2CB16A, #2CB16A, $white);
+	}
+	&-secondary {
+		@include button-variant(#2CB16A, #2CB16A, $white, #29A261, #29A261, #white);
 	}
 	&-icon-lock {
 		display: flex;
@@ -24,5 +36,26 @@
 			background: currentColor;
 			margin-left: 10px;
 		}
+	}
+	&-outline-light {
+		@include button-outline-variant($white, $white, $blue-03);
+	}
+	&-sm {
+		font-size: 16px;
+		padding: 17px;
+		min-width: 100%;
+		background: #2db26b;
+		border: none;
+		color: #FFF;
+		@include media-breakpoint-up(md) {
+			min-width: 184px;
+			font-size: 16px;
+			padding: 17px;
+		}
+	}
+	&-disabled {
+		border-color: $gray-200;
+		color: $gray-520;
+		pointer-events: none;
 	}
 }

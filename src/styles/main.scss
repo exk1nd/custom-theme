@@ -1,6 +1,7 @@
 //@import "~bootstrap/scss/bootstrap";
 
 @import "variables";
+@import "fonts";
 // Configuration
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -44,6 +45,8 @@
 
 // Utilities
 @import "~bootstrap/scss/utilities/api";
+//@import "~nice-select2/src/scss/nice-select2";
+//@import "~swiper/swiper-bundle.min.css";
 
 //custom_includes
 @import "reset";
@@ -52,30 +55,11 @@
 
 @import "header";
 @import "footer";
-@import "else-page";
 @import "home-page";
 @import "404";
-@import "blog";
-@import "money-fast-form";
+//@import "blog";
 @import "sidebar";
 @import "content-default";
-@import "intro-section";
-@import "main-sidebar";
-@import "credit-blocks-section";
-@import "text-image-columns-section";
-@import "breadcrumbs";
-@import "team-section";
-@import "provide-section";
-@import "reviews-section";
-@import "partners-section";
-@import "text-banner-section";
-@import "writers-section";
-@import "creditor-card";
-@import "app-card";
-@import "cta-block";
-@import "credit-card-block";
-@import "preview-block";
-@import "smart-banner-holder";
 
 // part-sections
-@import "hamburger";
+//@import "hamburger";

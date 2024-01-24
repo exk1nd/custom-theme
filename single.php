@@ -9,45 +9,53 @@
 
 get_header();
 $sidebar = get_field( 'hide_sidebar' );
-$disclosure = get_field( 'advertising_disclosure' );
-$intro            = get_field( 'intro_section' );
-$type             = $intro['type'];
-$type_image_small = 'image_small';
-$type_image_large = 'image_large';
 ?>
 
-	<main class="main-sidebar <?php if ( $type === $type_image_small ): echo 'intro-type-image-small'; elseif ( $type === $type_image_large ): echo 'intro-type-image-large'; endif; ?>">
+	<main class="main-wrapper">
+        <div class="container breadcrumb-table">
+            <?php
+            if ( function_exists( 'yoast_breadcrumb' ) ) {
+                yoast_breadcrumb( '<div id="breadcrumbs">', '</div>' );
+            }
+            ?>
+            <div class="advertising-table">
+                <label for="toggle-important">
+                    <span id="table-container-important" class="table-container-important">Advertising Disclosure</span>
+                </label>
+                <input id="toggle-important" type="checkbox">
+                <label for="toggle-important" class="toggle-close"></label>
+                <span id="table-container-important-text" class="table-container-important-text">TriceLoans is a publisher supported by advertising that gets compensated in exchange for your clicking on links posted here. Being an independent comparison service, TriceLoans may feature sponsored services and products based on the compensation rate.</span>
+            </div>
+        </div>
 		<?php get_template_part( 'part-templates/flexible-content/intro-section' ); ?>
-		<?php get_template_part( 'part-templates/form-container' ); ?>
-		<div class="content-holder">
-			<div class="container">
-				<?php if ( ! $sidebar ): ?>
-				<div class="wrapper">
-					<?php endif; ?>
-					<section id="tableblock">
-						<?php
-						while ( have_posts() ) :
-							the_post();
-
-							get_template_part( 'part-templates/content', get_post_type() );
-
-						endwhile; // End of the loop.
-						?>
-
-					</section>
+		<?php if ( strlen( get_the_content() ) ): ?>
+			<section class="content-holder">
+				<div class="container">
 					<?php if ( ! $sidebar ): ?>
+					<div class="wrapper">
+						<?php endif; ?>
+						<div id="tableblock" data-page-id="<?= get_the_ID(); ?>">
+							<?php
+							while ( have_posts() ) :
+								the_post();
+
+								get_template_part( 'part-templates/content', get_post_type() );
+
+							endwhile; // End of the loop.
+							?>
+
+						</div>
+						<?php if ( ! $sidebar ): ?>
+					</div>
+				<?php endif; ?>
+					<?php
+					if ( ! $sidebar ):
+						get_sidebar();
+					endif;
+					?>
 				</div>
-			<?php endif; ?>
-				<?php
-				if ( ! $sidebar ):
-					get_sidebar();
-				endif;
-				?>
-			</div>
-			<?php if ( $disclosure ): ?>
-				<?php get_template_part( 'part-templates/advertising-disclosure' ) ?>
-			<?php endif; ?>
-		</div>
+			</section>
+		<?php endif; ?>
 		<?php get_template_part( 'part-templates/flexible-content' ) ?>
 	</main><!-- #main -->
 

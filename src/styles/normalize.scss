@@ -12,7 +12,7 @@
 }
 a {
 	cursor: pointer;
-	color: #0079ff;
+	color: #2E4921;
 	font-weight: 500;
 }
 ul[class],
@@ -21,7 +21,7 @@ ol[class] {
 	list-style: none;
 }
 ul {
-	padding-left: 0.5rem;
+	padding-left: 1rem;
 }
 html, body {
 	height: 100%;
@@ -47,7 +47,7 @@ html, body {
 	//justify-content: center;
 	//align-items: center;
 	//text-transform: uppercase;
-	//font-family: $manrope-font;
+	//font-family: $dmsans-font;
 	//background-color: transparent;
 	//letter-spacing: 1px;
 	//transition: background-color 0.2s ease, color 0.2s ease;
@@ -55,20 +55,19 @@ html, body {
 }
 // styles for elements and tags
 h1, h2, h3, h4, h5, h6 {
-	font-family: $manrope-font;
+	font-family: $dmsans-font;
 	font-weight: 700;
 }
 h1 {
-	color: $gray-700;
 	font-size: 36px;
 	line-height: 1.1;
+	font-weight: 800;
 	@include media-breakpoint-up(lg) {
 		font-size: 48px;
 		line-height: 1.125;
 	}
 }
 h2 {
-	color: $gray-700;
 	font-size: 28px;
 	line-height: 34px;
 	@include media-breakpoint-up(lg) {
@@ -77,37 +76,37 @@ h2 {
 	}
 }
 h3 {
-	color: $gray-700;
 	font-size: 28px;
 	line-height: 34px;
 }
 h4 {
-	color: $gray-700;
+	font-size: 24px;
+	line-height: 28px;
+}
+h5 {
 	font-size: 20px;
 	line-height: 24px;
 }
+h6 {
+	font-size: 18px;
+	line-height: 24px;
+}
 body {
-	font-family: $inter-font;
+	font-family: $dmsans-font;
 	font-size: 16px;
 	line-height: 1.5;
 	overflow-x: hidden;
-	opacity: 0;
-	color: $gray-700;
+	color: #393B38;
 	@include media-breakpoint-up(lg) {
 		font-size: 18px;
 		line-height: 1.555;
 	}
-	&.locked {
-	}
-	&.loaded {
-		opacity: 1;
-	}
 }
 body::-webkit-scrollbar {
-	width: 0.5em;
+	width: 0.6em;
 }
 body::-webkit-scrollbar-track {
-	background: #ffffff;
+	background: #FFF;
 }
 body::-webkit-scrollbar-thumb {
 	background: rgba(0, 0, 0, 0.25);

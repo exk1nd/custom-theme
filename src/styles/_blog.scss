@@ -1,6 +1,7 @@
 .blog-table {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .wp-post-image {
   width: 100%;

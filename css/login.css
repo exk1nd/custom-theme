@@ -1,0 +1,35 @@
+.login form,
+.login #login_error,
+.login .message,
+.login .success {
+	margin-top: 20px;
+	margin-left: 0;
+	padding: 12px;
+	font-weight: 400;
+	overflow: hidden;
+	background: #FFF !important;
+	border: 1px solid #0e0e0e !important;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+	color: #0e0e0e !important;
+}
+#login {
+	padding: 7% 0 0 !important;
+}
+.login #backtoblog a,
+.login #nav a {
+	color: #0e0e0e !important;
+}
+.login #backtoblog a,
+.login #nav a {
+	color: #0e0e0e !important;
+}
+.login form .input,
+.login input[type=text] {
+	color: #0e0e0e;
+}
+body.login div#login h1 a {
+	display: none;
+}
+body {
+	background: #F1F1F1 !important;
+}
